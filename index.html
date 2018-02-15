@@ -31,8 +31,8 @@
 <h2>Experiment Description</h2>
   Logistic regression/softmax regression is trained in mxnet and sklearn to the same
   tolerance value and a comparison between the training time in both the framework is made.
-  A logistic regression in mxnet is as a neuron with sigmoid loss obtained by putting LogisticRegressionOutput function in mxnet whereas for logistic regression in sklearn we have used the inbuilt LogisticRegresion class with multi_class set to ovr.
-  A softmax regression in mxnet is a single layer neuron which has as many neurons as number of classes and has a softmax activation function whereas for softmax regression in sklearn we have used the inbuild LogisticRegression class with multi_class set to multinomial.
+  A logistic regression in mxnet is as a neuron with sigmoid activation and logistic loss obtained by putting LogisticRegressionOutput function in mxnet whereas for logistic regression in sklearn we have used the inbuilt LogisticRegresion class with multi_class set to ovr.
+  A softmax regression in mxnet is a single layer of neuron which has as many neurons as number of classes and has a softmax activation function whereas for softmax regression in sklearn we have used the inbuilt LogisticRegression class with multi_class set to multinomial.
   Training time is recorded in both frameworks. Moreover, the logistic
   regression and softmax regression are optimized with newton-cg and lbfgs in sklearn
   whereas it is optimized with stochastic gradient descent and its variants in mxnet. The
