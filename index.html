@@ -30,8 +30,11 @@
 <h2>Dataset Description</h2>
 <h2>Experiment Description</h2>
   Logistic regression/softmax regression is trained in mxnet and sklearn to the same
-  tolerance value. Training time is recorded in both frameworks. Moreover, the logistic
-  regression and softmax regression are trained with newton-cg and lbfgs in sklearn
+  tolerance value and a comparison between the training time in both the framework is made.
+  A logistic regression in mxnet is as a neuron with sigmoid loss obtained by putting LogisticRegressionOutput function in mxnet whereas for logistic regression in sklearn we have used the inbuilt LogisticRegresion class with multi_class set to ovr.
+  A softmax regression in mxnet is a single layer neuron which has as many neurons as number of classes and has a softmax activation function whereas for softmax regression in sklearn we have used the inbuild LogisticRegression class with multi_class set to multinomial.
+  Training time is recorded in both frameworks. Moreover, the logistic
+  regression and softmax regression are optimized with newton-cg and lbfgs in sklearn
   whereas it is optimized with stochastic gradient descent and its variants in mxnet. The
   models are trained with 70% of the entire dataset and are tested on the remaining 30%
   of the data. Tolerance measure for our experiment is infinity gradient. The models are
@@ -39,7 +42,7 @@
 <h2>Setup</h2>
   The experiments have been carried out in google cloud instance with 8 CPU cores and
   50 GB RAM size. The size of RAM was kept high so that swap time can be prevented.
-<h2>Experimentatin and Results</h2>
+<h2>Experimentaton and Results</h2>
   The datasets were normalized before training. Moreover, the models were zero-initialized 
   so that a model in different framework has the same initial starting point.
   The models are trained until convergence and are check
