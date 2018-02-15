@@ -1,28 +1,52 @@
-<h1>RML OSS </h1>
+<h1>RML OSS BENCHMARKING</h1>
 <h2>About</h2>
   This article aims at benchmarking 2 common machine learning libraries for a
-few machine learning algorithms. The target of this study is multiclass
-classification with sparse, not so sparse to dense datasets. We have explored
-various dataset for this work with the cardinality of sample space ranging from
-a few hundred to millions similarly for the cardinality of the feature space.
-The algorithms studied are : 
-<ul>
-  <li>Logistic Regresion</li>
-  <li>Softmax Regression</li>
-  <li>Milk</li>
-</ul>
-- Logistic Regression.
-- Softmax Regression.
-The Frameworks explored are:
-- Mxnet
-- Sci-Kit Learn.
-These linear algorithms are optimized with different optimizers, we have chosen linear
-classifiers because they have a fairly low training time. Mxnet which envisage to be a
-faster solution for training deep neural network doesn’t support conventional
-optimization techniques rather it sticks to gradient descent and its variants popularly
-found in the deep learning literature. Whereas libraries like sci-kit learn which envisage
-to cater to the needs of machine learning in general supports various optimization
-techniques. Faster optimization techniques gives sci-kit learn an advantage which
-stochastic gradient descent fails to give to mxnet although implementation of mxnet
-is much efficient.
+  few machine learning algorithms. The target of this study is multiclass
+  classification with sparse, not so sparse to dense datasets. We have explored
+  various dataset for this work with the cardinality of sample space ranging from
+  a few hundred to millions similarly for the cardinality of the feature space.
+  The algorithms studied are : 
+  <ul>
+    <li>Logistic Regression.</li>
+    <li>Softmax Regression.</li>
+  </ul>
+
+  The Frameworks explored are:
+  <ul>
+    <li>Mxnet.</li>
+    <li>Sci-Kit Learn.</li>
+  </ul>
+
+  These linear algorithms are optimized with different optimizers, we have chosen linear
+  classifiers because they have a fairly low training time. Mxnet which envisage to be a
+  faster solution for training deep neural network doesn’t support conventional
+  optimization techniques rather it sticks to gradient descent and its variants popularly
+  found in the deep learning literature. Whereas libraries like sci-kit learn which envisage
+  to cater to the needs of machine learning in general supports various optimization
+  techniques. Faster optimization techniques give sci-kit learn an advantage which
+  stochastic gradient descent fails to give to mxnet although implementation of mxnet
+  is much efficient.
+
 <h2>Dataset Description</h2>
+<h2>Experiment Description</h2>
+  Logistic regression/softmax regression is trained in mxnet and sklearn to the same
+  tolerance value. Training time is recorded in both frameworks. Moreover, the logistic
+  regression and softmax regression are trained with newton-cg and lbfgs in sklearn
+  whereas it is optimized with stochastic gradient descent and its variants in mxnet. The
+  models are trained with 70% of the entire dataset and are tested on the remaining 30%
+  of the data. Tolerance measure for our experiment is infinity gradient. The models are
+  trained with cross-entropy loss which ensures convexity.
+<h2>Setup</h2>
+  The experiments have been carried out in google cloud instance with 8 CPU cores and
+  50 GB RAM size. The size of RAM was kept high so that swap time can be prevented.
+<h2>Experimentatin and Results</h2>
+  The datasets were normalized before training. Moreover, the models were zero-initialized 
+  so that a model in different framework has the same initial starting point.
+  The models are trained until convergence and are check
+  pointed at various points so that a comparison between
+  frameworks are possible. This is done by obtaining the tolerance measure(which was
+  the inifinity norm of gradient after 100,200,400,800,1600... until convergence) and time taken
+  for gradient descent in mxnet and time taken by Netwton-cg and lbfgs in sklearn to obtain the same tolerance. 
+  Hence a comparison of time taken between different frameworks to obtain the same tolerance measure was done.
+  The obtained results are summarized in the form of graphs shown below.
+  ![SVM Guide 1](https://sunit1409.github.com/rml_loss/logistic_plots/svm_guide_1.png)
