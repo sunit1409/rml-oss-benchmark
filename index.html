@@ -6,5 +6,23 @@ classification with sparse, not so sparse to dense datasets. We have explored
 various dataset for this work with the cardinality of sample space ranging from
 a few hundred to millions similarly for the cardinality of the feature space.
 The algorithms studied are : 
+<ul>
+  <li>Logistic Regresion</li>
+  <li>Softmax Regression</li>
+  <li>Milk</li>
+</ul>
 - Logistic Regression.
 - Softmax Regression.
+The Frameworks explored are:
+- Mxnet
+- Sci-Kit Learn.
+These linear algorithms are optimized with different optimizers, we have chosen linear
+classifiers because they have a fairly low training time. Mxnet which envisage to be a
+faster solution for training deep neural network doesn’t support conventional
+optimization techniques rather it sticks to gradient descent and its variants popularly
+found in the deep learning literature. Whereas libraries like sci-kit learn which envisage
+to cater to the needs of machine learning in general supports various optimization
+techniques. Faster optimization techniques gives sci-kit learn an advantage which
+stochastic gradient descent fails to give to mxnet although implementation of mxnet
+is much efficient.
+<h2>Dataset Description</h2>
