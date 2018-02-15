@@ -28,6 +28,139 @@
   is much efficient.
 
 <h2>Dataset Description</h2>
+Dataset with varying number of samples , number of features and sparsity are used. We have presented in a tabular form details of the dataset
+used.
+<h3>Logisitic Regression</h3>
+<table style="width:100%">
+  <tr>
+    <th>Dataset Name</th>
+    <th>Number of samples</th> 
+    <th>Number of Features</th>
+  </tr>
+  <tr>
+    <td>SVM Guide 1</td>
+    <td>3089</td> 
+    <td>4</td>
+  </tr>
+  
+  
+  <tr>
+    <td>Phishing</td>
+    <td>11055</td> 
+    <td>30</td>
+  </tr>
+  
+  
+    <tr>
+    <td>Madelon</td>
+    <td>2000</td> 
+    <td>500</td>
+  </tr>
+  
+      <tr>
+    <td>Cod_RNA</td>
+    <td>59535</td> 
+    <td>8</td>
+  </tr>
+  
+  <tr>
+  <td>W9a</td>
+   <td>32561</td> 
+    <td>123</td>
+  </tr>
+  <tr>
+  <td>Real-sim</td>
+   <td>72309</td> 
+    <td>20958</td>
+  </tr>
+  
+  <tr>
+  <td>RCV-1</td>
+   <td>20242</td> 
+    <td>47236</td>
+  </tr>
+  <tr>
+  <td>News-20</td>
+   <td>19996</td> 
+    <td>1355191 </td>
+  </tr>
+  <tr>
+  <td>Sussy</td>
+   <td>5000000</td> 
+    <td>18</td>
+  </tr>
+  
+ </table>
+
+<h3>Softmax Regression</h3>
+<table style="width:100%">
+  <tr>
+    <th>Dataset Name</th>
+    <th>Number of samples</th> 
+    <th>Number of Features</th>
+    <th>Number of Classes</th>
+  </tr>
+  <tr>
+    <td>Iris</td>
+    <td>150</td> 
+    <td>4</td>
+    <td>3</td>
+  </tr>
+  
+  <tr>
+    <td>Segment</td>
+    <td>2310</td> 
+    <td>19</td>
+    <td>7</td>
+  </tr>
+  
+
+  <tr>
+    <td>Segment</td>
+    <td>4435</td> 
+    <td>36</td>
+    <td>6</td>
+  </tr>
+    <tr>
+    <td>Pendigits</td>
+    <td>7494</td> 
+    <td>16</td>
+    <td>10</td>
+  </tr>
+    <tr>
+    <td>DNA</td>
+    <td>2000</td> 
+    <td>180</td>
+    <td>3</td>
+  </tr> 
+  
+      <tr>
+    <td>USPS</td>
+    <td>7291</td> 
+    <td>256</td>
+    <td>10</td>
+  </tr>
+  
+      <tr>
+    <td>Letter</td>
+    <td>15000</td> 
+    <td>16</td>
+    <td>26</td>
+  </tr>
+       <tr>
+    <td>Sensorless</td>
+    <td>58509</td> 
+    <td>48</td>
+    <td>11</td>
+  </tr> 
+       <tr>
+    <td>Mnist</td>
+    <td>60000</td> 
+    <td>780</td>
+    <td>10</td>
+  </tr> 
+  
+ </table>
 <h2>Experiment Description</h2>
   Logistic regression/softmax regression is trained in mxnet and sklearn to the same
   tolerance value and a comparison between the training time in both the framework is made.
@@ -59,7 +192,7 @@
   <img src="/rml-oss-benchmark/logistic_plots/phishing.png" alt="hi" height="500" width="1000" class="inline"/>
   <figcaption>Phishing with 11055 samples and 30 features</figcaption>
   <img src="/rml-oss-benchmark/logistic_plots/madelon.png" alt="hi" height="500" width="1000" class="inline"/>
-  <figcaption>Madelon with 200 samples and 500 features</figcaption>
+  <figcaption>Madelon with 2000 samples and 500 features</figcaption>
   
    <img src="/rml-oss-benchmark/logistic_plots/cod_rna.png" alt="hi" height="500" width="1000" class="inline"/>
   <figcaption>Cod_RNA with 59535 samples and 8 features</figcaption>
@@ -89,10 +222,10 @@
   <img src="/rml-oss-benchmark/softmax_plots/dna.png" alt="hi" height="500" width="1000" class="inline"/>
   <figcaption>DNA with 2000 samples, 180 features and 3 classes</figcaption>
   <img src="/rml-oss-benchmark/softmax_plots/usps.png" alt="hi" height="500" width="1000" class="inline"/>
-  <figcaption>USPS with 7291 samples, 16 features and 10 classes</figcaption>
+  <figcaption>USPS with 7291 samples, 256 features and 10 classes</figcaption>
   
    <img src="/rml-oss-benchmark/softmax_plots/letter.png" alt="hi" height="500" width="1000" class="inline"/>
-  <figcaption>Letter with 15000 samples, 256 features and 26 classes</figcaption>
+  <figcaption>Letter with 15000 samples, 16 features and 26 classes</figcaption>
    <img src="/rml-oss-benchmark/softmax_plots/sensorless.png" alt="hi" height="500" width="1000" class="inline"/>
   <figcaption>Sensorless with 58509 samples, 48 features and 11 classes</figcaption>
   <img src="/rml-oss-benchmark/softmax_plots/mnist_1.png" alt="hi" height="500" width="1000" class="inline"/>
