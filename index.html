@@ -50,4 +50,17 @@
   Hence a comparison of time taken between different frameworks to obtain the same tolerance measure was done.
   The obtained results are summarized in the form of graphs shown below.
   <img src="rml-oss-benchmark/logistic_plots/svm_guide_1.png" class="inline"/>
-
+<h2>Conclusion</h2>
+<h3>Logistic Regression</h3>
+  When the cardinality of the feature space is less a logistic regression trained in mxnet
+  using sgd converges faster in comparison with a logistic regression trained in sklearn
+  optimized using lbfgs and newton-cg. Which can be attributed to better
+  implementation of the framework whereas the same machine learning model takes
+  comparable time when the feature space is larger and is sparse.
+<h3>Softmax Regression </h3>
+  When the cardinality of the feature space is less a softmax regression trained in mxnet
+  with sgd converges much later in comparison with a softmax regression trained in
+  sklearn optimized using lbfgs and newton-cg. When the cardinality of the feature space
+  is sparse the same model trained in sklearn optimized with newton-cg or lbfgs is order
+  of magnitude faster than the model trained in mxnet optimized with sgd and its
+  variants.
